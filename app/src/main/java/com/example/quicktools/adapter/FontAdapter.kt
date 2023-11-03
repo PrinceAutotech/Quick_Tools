@@ -39,30 +39,30 @@ class FontAdapter(
 
         holder.binding.tvStlishText.text = dataset[holder.adapterPosition].fontText
 
-//        holder.binding.layoutInsta.setOnClickListener {
-//            val whatsappIntent = Intent(Intent.ACTION_SEND)
-//            whatsappIntent.type = "text/plain"
-//            whatsappIntent.setPackage("com.whatsapp")
-//            whatsappIntent.putExtra(Intent.EXTRA_TEXT, holder.binding.tvStlishText.text)
-//            context.startActivity(whatsappIntent)
-//        }
-//
-//        holder.binding.ivShare.setOnClickListener {
-//            val intent2 = Intent()
-//            intent2.action = Intent.ACTION_SEND
-//            intent2.type = "text/plain"
-//            intent2.putExtra(Intent.EXTRA_TEXT, holder.binding.tvStlishText.text)
-//            context.startActivity(Intent.createChooser(intent2, "Share via"))
-//        }
-//
-//        holder.binding.ivCopy.setOnClickListener {
-//            (holder.itemView.context.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(
-//                ClipData.newPlainText(
-//                    "stylish text", holder.binding.tvStlishText.text
-//                )
-//            )
-//            Toast.makeText(holder.itemView.context, "Text Copied", Toast.LENGTH_SHORT).show()
-//        }
+        holder.binding.layoutInsta.setOnClickListener {
+            val whatsappIntent = Intent(Intent.ACTION_SEND)
+            whatsappIntent.type = "text/plain"
+            whatsappIntent.setPackage("com.whatsapp")
+            whatsappIntent.putExtra(Intent.EXTRA_TEXT, holder.binding.tvStlishText.text)
+            context.startActivity(whatsappIntent)
+        }
+
+        holder.binding.ivShare.setOnClickListener {
+            val intent2 = Intent()
+            intent2.action = Intent.ACTION_SEND
+            intent2.type = "text/plain"
+            intent2.putExtra(Intent.EXTRA_TEXT, holder.binding.tvStlishText.text)
+            context.startActivity(Intent.createChooser(intent2, "Share via"))
+        }
+
+        holder.binding.ivCopy.setOnClickListener {
+            (holder.itemView.context.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(
+                ClipData.newPlainText(
+                    "stylish text", holder.binding.tvStlishText.text
+                )
+            )
+            Toast.makeText(holder.itemView.context, "Text Copied", Toast.LENGTH_SHORT).show()
+        }
 
     }
 }

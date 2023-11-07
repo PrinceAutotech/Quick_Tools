@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context="nike.name.generator.MainActivity"
     android:background="@color/black">
 
    <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,6 +15,18 @@
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent">
+
+<!--      <com.google.android.gms.ads.AdView-->
+<!--          android:id="@+id/adView"-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_alignParentBottom="true"-->
+<!--          android:layout_centerHorizontal="true"-->
+<!--          app:adSize="FULL_BANNER"-->
+<!--          app:adUnitId="ca-app-pub-3940256099942544/6300978111"-->
+<!--          app:layout_constraintEnd_toEndOf="parent"-->
+<!--          app:layout_constraintStart_toStartOf="parent"-->
+<!--          app:layout_constraintTop_toTopOf="parent"/>-->
 
       <androidx.cardview.widget.CardView
           android:id="@+id/cardView"
@@ -44,6 +56,8 @@
                 android:layout_marginEnd="5dp"
                 android:background="@android:color/transparent"
                 android:hint="Nickname"
+                android:textColor="#8A2BE2"
+                android:fontFamily="@font/montserrat_medium"
                 android:textColorHint="#8A2BE2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -75,10 +89,11 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/arizonia"
-                android:textColor="@color/white"
-                android:background=""
-                android:text="Generate" />
+                android:background="@null"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Generate"
+                android:textSize="18sp"
+                android:textColor="@color/white" />
 
          </androidx.constraintlayout.widget.ConstraintLayout>
       </androidx.cardview.widget.CardView>
@@ -87,19 +102,6 @@
 
 
    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-<!--      <EditText-->
-<!--          android:id="@+id/et_text"-->
-<!--          android:layout_width="match_parent"-->
-<!--          android:layout_height="wrap_content"-->
-<!--          android:layout_margin="10dp"-->
-<!--          android:backgroundTint="@color/black"-->
-<!--          android:hint="entre the text"-->
-<!--          android:maxLines="2"-->
-<!--          android:padding="15dp"-->
-<!--          android:textColorHint="#FF4F42"-->
-<!--          android:textSize="20sp" />-->
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/rv_fonts"
